@@ -1,8 +1,8 @@
 [package]
-
-name = "murmurhash3"
-version = "0.0.6"
-authors = ["mhallin <mhallin@gmail.com>"]
+name = "malwaredb-murmurhash3"
+version = "0.1.0"
+authors = ["mhallin <mhallin@gmail.com>", "Richard Zak <richard.j.zak@gmail.com>"]
+edition = "2021"
 description = "MurmurHash3 implementation"
 license = "MIT"
 readme = "README.rst"
