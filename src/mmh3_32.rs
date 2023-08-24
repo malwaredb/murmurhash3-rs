@@ -80,36 +80,4 @@ mod test {
     fn test_large_data() {
         assert_eq!(murmurhash3_x86_32("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at consequat massa. Cras eleifend pellentesque ex, at dignissim libero maximus ut. Sed eget nulla felis".as_bytes(), 0), 1004899618);
     }
-
-    #[cfg(feature = "nightly")]
-    mod bench {
-        extern crate rand;
-        extern crate test;
-
-        use self::rand::Rng;
-        use self::test::{black_box, Bencher};
-        use std::iter::FromIterator;
-
-        use super::super::murmurhash3_x86_32;
-
-        fn run_bench(b: &mut Bencher, size: u64) {
-            let mut data: Vec<u8> = FromIterator::from_iter((0..size).map(|_| 0u8));
-            rand::thread_rng().fill_bytes(&mut data);
-
-            b.bytes = size;
-            b.iter(|| {
-                black_box(murmurhash3_x86_32(&data, 0));
-            });
-        }
-
-        #[bench]
-        fn bench_random_256k(b: &mut Bencher) {
-            run_bench(b, 256 * 1024);
-        }
-
-        #[bench]
-        fn bench_random_16b(b: &mut Bencher) {
-            run_bench(b, 16);
-        }
-    }
 }
