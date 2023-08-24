@@ -1,6 +1,11 @@
 Change Log
 ==========
 
+0.1.0_ - 2023-08-21
+-------------------
+* Re-released at `malwaredb-murmurhash3` for use with MalwareDB
+* Removed dependencies on x86-specific crates and code.
+
 Unreleased_
 ----------
 
