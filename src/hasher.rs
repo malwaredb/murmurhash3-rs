@@ -24,7 +24,7 @@ impl Hasher for Murmur3Hasher {
     }
 
     fn write(&mut self, bytes: &[u8]) {
-        let mut copy = bytes.clone().to_vec();
+        let mut copy = bytes.to_vec();
         self.bytes.append(&mut copy);
     }
 }
