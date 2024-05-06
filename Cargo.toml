@@ -5,7 +5,7 @@ authors = ["mhallin <mhallin@gmail.com>", "Richard Zak <richard.j.zak@gmail.com>
 edition = "2021"
 description = "MurmurHash3 implementation"
 license = "MIT"
-readme = "README.rst"
+readme = "README.md"
 repository = "https://github.com/malwaredb/murmurhash3-rs"
 
 [lib]
