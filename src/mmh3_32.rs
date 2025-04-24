@@ -1,4 +1,4 @@
-use std::mem;
+use std::ptr;
 
 fn fmix32(mut h: u32) -> u32 {
     h ^= h >> 16;
@@ -11,9 +11,10 @@ fn fmix32(mut h: u32) -> u32 {
 }
 
 fn get_32_block(bytes: &[u8], index: usize) -> u32 {
-    let b32: &[u32] = unsafe { mem::transmute(bytes) };
-
-    b32[index]
+    unsafe {
+        let p = bytes.as_ptr().add(index * 4);
+        ptr::read_unaligned(p.cast())
+    }
 }
 
 pub fn murmurhash3_x86_32(bytes: &[u8], seed: u32) -> u32 {
