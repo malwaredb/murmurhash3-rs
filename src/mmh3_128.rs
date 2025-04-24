@@ -1,4 +1,4 @@
-use std::mem;
+use std::ptr;
 
 fn fmix64(mut k: u64) -> u64 {
     k ^= k >> 33;
@@ -11,9 +11,14 @@ fn fmix64(mut k: u64) -> u64 {
 }
 
 fn get_128_block(bytes: &[u8], index: usize) -> (u64, u64) {
-    let b64: &[u64] = unsafe { mem::transmute(bytes) };
-
-    (b64[index], b64[index + 1])
+    unsafe {
+        let p1 = bytes.as_ptr().add(index * 8);
+        let p2 = p1.add(8);
+        (
+            ptr::read_unaligned(p1.cast()),
+            ptr::read_unaligned(p2.cast()),
+        )
+    }
 }
 
 pub fn murmurhash3_x64_128(bytes: &[u8], seed: u64) -> (u64, u64) {
