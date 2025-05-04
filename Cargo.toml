@@ -1,6 +1,6 @@
 [package]
 name = "malwaredb-murmurhash3"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["mhallin <mhallin@gmail.com>", "Richard Zak <richard.j.zak@gmail.com>"]
 edition = "2021"
 description = "MurmurHash3 implementation"
