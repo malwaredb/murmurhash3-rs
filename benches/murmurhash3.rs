@@ -45,4 +45,4 @@ fn bench_random128_16b(c: &mut Criterion) {
 
 criterion_group!(benches, bench_random_16b, bench_random_256k);
 criterion_group!(benches128, bench_random128_16b, bench_random128_256k);
-criterion_main!(benches);
+criterion_main!(benches, benches128);
