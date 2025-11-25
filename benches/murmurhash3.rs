@@ -4,7 +4,7 @@ use rand::RngCore;
 use std::hint::black_box;
 use std::iter::FromIterator;
 
-use murmurhash3::{murmurhash3_x64_128, murmurhash3_x86_32};
+use malwaredb_murmurhash3::{murmurhash3_x64_128, murmurhash3_x86_32};
 
 fn run_bench(c: &mut Criterion, size: u64) {
     c.bench_function("murmurhash 256k", |b| {
