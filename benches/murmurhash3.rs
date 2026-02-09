@@ -1,6 +1,6 @@
 use criterion::{criterion_group, criterion_main, Criterion};
 
-use rand::RngCore;
+use rand::Rng;
 use std::hint::black_box;
 use std::iter::FromIterator;
 
