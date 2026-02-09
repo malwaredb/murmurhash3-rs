@@ -10,7 +10,7 @@ repository = "https://github.com/malwaredb/murmurhash3-rs"
 rust-version = "1.78"
 
 [dev-dependencies]
-rand = "0.9"
+rand = "0.10"
 criterion = "0.8.0"
 
 [[bench]]
