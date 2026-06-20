@@ -1,4 +1,8 @@
-[![Test](https://github.com/malwaredb/murmurhash3-rs/actions/workflows/test.yml/badge.svg)](https://github.com/malwaredb/murmurhash3-rs/actions/workflows/test.yml)[![Lint](https://github.com/malwaredb/murmurhash3-rs/actions/workflows/lint.yml/badge.svg)](https://github.com/malwaredb/murmurhash3-rs/actions/workflows/lint.yml)[![Crates.io Version](https://img.shields.io/crates/v/malwaredb-murmurhash3)](https://crates.io/crates/malwaredb-murmurhash3)
+[![Crates.io Version](https://img.shields.io/crates/v/malwaredb-murmurhash3)](https://crates.io/crates/malwaredb-murmurhash3)
+
+> [!WARNING]  
+> This crate is no longer maintained as it's no longer necessary for the MalwareDB project.
+> Instead see https://github.com/mhallin/murmurhash3-rs
 
 ## MurmurHash3.rs
 
